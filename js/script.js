@@ -23,15 +23,23 @@ function loopThroughData(s) {
 		var schoolName = s[i]["SCHOOL_NAME"];
 		var year = s[i]["YEAR"];
 		var gradPct = s[i]["GRADUATES_PCT"];
+		var dropout = s[i]["DROPOUT_9_12_COHORT"];
 		//&& to indicate and AND condition
-		//if (gradPct < 50 && gradPct > 0) {
-			//console.log(year, schoolName, gradPct);
-		//}
-		var barwidth = gradPct * 10;
-		if (schoolName === "FREDERICK DOUGLASS HIGH")
-			$(".chart").append(
-				"<div class='bar' style='width: "+barwidth+"px'></div>"
-			);
+		var barwidth = dropout*10;
+		if (schoolName ==="FREDERICK DOUGLASS HIGH") {
+			//$(".chart").append(
+				//"</p>"+year+":"+" "+dropout+"+"</p>"+
+				//"<div class='bar' style='width: "+barwidth+"px'></div>"
+				//)
+            console.log (year, dropout)
+		}
+		//var barwidth = gradPct * 10;
+		//if (schoolName === "FREDERICK DOUGLASS HIGH")
+		//	$(".chart").append(
+		//		"<p>"+year+":"+" "+gradPct+"%"+"</p>"+
+		//		"<div class='bar' style='width: "+barwidth+"px'></div>"
+		//	);
+        
 	}
 
 } 
