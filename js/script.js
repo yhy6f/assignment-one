@@ -13,9 +13,6 @@ function getData(){
 	})
 
 }
-function addTwoNumbers(num1, num2) {
-	console.log(num1+num2);
-}
 
 function loopThroughData(s) {
 
@@ -24,21 +21,13 @@ function loopThroughData(s) {
 		var year = s[i]["YEAR"];
 		var gradPct = s[i]["GRADUATES_PCT"];
 		var dropout = s[i]["DROPOUT_9_12_COHORT"];
-		//&& to indicate and AND condition
 		var barwidth = dropout*10;
 		if (schoolName ==="FREDERICK DOUGLASS HIGH") {
-			//$(".chart").append(
-				//"</p>"+year+":"+" "+dropout+"+"</p>"+
-				//"<div class='bar' style='width: "+barwidth+"px'></div>"
-				//)
-            console.log (year, dropout)
+			$(".chart").append(
+				"<p>"+year+":"+" "+dropout+"</p>"+
+				"<div class='bar' style='width: "+barwidth+"px'></div>"
+				);
 		}
-		//var barwidth = gradPct * 10;
-		//if (schoolName === "FREDERICK DOUGLASS HIGH")
-		//	$(".chart").append(
-		//		"<p>"+year+":"+" "+gradPct+"%"+"</p>"+
-		//		"<div class='bar' style='width: "+barwidth+"px'></div>"
-		//	);
         
 	}
 
